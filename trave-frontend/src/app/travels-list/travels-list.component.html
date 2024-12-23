@@ -1,0 +1,13 @@
+<div class="travels-container">
+    <h2>Travel Destinations</h2>
+  
+    <div *ngIf="travels.length === 0">No travels available.</div>
+  
+    <div *ngFor="let travel of travels" class="travel-card">
+      <h3>{{ travel.name }}</h3>
+      <p><strong>Country:</strong> {{ travel.country }}</p>
+      <p><strong>Description:</strong> {{ travel.description }}</p>
+      <p><strong>Rating:</strong> {{ travel.rating }} / 5</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,13 @@
+<div *ngIf="travels.length > 0">
+  <ul>
+    <li *ngFor="let travel of travels">
+      <h2>{{ travel.name }}</h2>
+      <p>{{ travel.country }}</p>
+      <p>{{ travel.description }}</p>
+      <p>Rating: {{ travel.rating }}</p>
+    </li>
+  </ul>
+</div>
+<div *ngIf="travels.length === 0">
+  <p>No travel destinations found.</p>
+</div>

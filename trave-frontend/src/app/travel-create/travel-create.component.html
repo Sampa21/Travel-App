@@ -1,0 +1,69 @@
+<div class="create-travel">
+    <h2>Add a New Travel Destination</h2>
+  
+    <form (ngSubmit)="onSubmit()" #travelForm="ngForm">
+      <div>
+        <label for="name">Destination Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          [(ngModel)]="travel.name"
+          required
+          #name="ngModel"
+        />
+        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+          <small class="error-text">Name is required.</small>
+        </div>
+      </div>
+  
+      <div>
+        <label for="country">Country</label>
+        <input
+          id="country"
+          name="country"
+          type="text"
+          [(ngModel)]="travel.country"
+          required
+          #country="ngModel"
+        />
+        <div *ngIf="country.invalid && (country.dirty || country.touched)">
+          <small class="error-text">Country is required.</small>
+        </div>
+      </div>
+  
+      <div>
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          [(ngModel)]="travel.description"
+          required
+          #description="ngModel"
+        ></textarea>
+        <div *ngIf="description.invalid && (description.dirty || description.touched)">
+          <small class="error-text">Description is required.</small>
+        </div>
+      </div>
+  
+      <div>
+        <label for="rating">Rating (1 to 5)</label>
+        <input
+          id="rating"
+          name="rating"
+          type="number"
+          [(ngModel)]="travel.rating"
+          required
+          min="1"
+          max="5"
+          #rating="ngModel"
+        />
+        <div *ngIf="rating.invalid && (rating.dirty || rating.touched)">
+          <small class="error-text">Rating is required (1 to 5).</small>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="travelForm.invalid">Add Travel</button>
+    </form>
+  </div>
+  

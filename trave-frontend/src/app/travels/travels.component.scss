@@ -1,0 +1,29 @@
+.travel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .travel-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .travel-card h2 {
+    color: #2c3e50;
+    font-size: 24px;
+  }
+  
+  .travel-card p {
+    font-size: 16px;
+    color: #7f8c8d;
+  }
+  
+  .travel-card strong {
+    color: #34495e;
+  }
+  
